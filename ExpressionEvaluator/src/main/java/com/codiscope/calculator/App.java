@@ -8,14 +8,14 @@ public class App {
 	private static final Logger LOGGER = LoggerFactory.getLogger(App.class.getName());
 		
 		public static void main(String[] args) {
-			String expression = "div(2,0)";
+			String expression = null;
 
-			/*
+			
 			if(args.length > 0)
 				expression = args[0];
 			else
 				System.out.println("Please enter the argrument");
-			*/
+			
 			ExpressionEvaluator calc = new ExpressionEvaluator();
 			
 			try{
