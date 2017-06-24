@@ -3,7 +3,7 @@
 
 >This Assignment consist of implementation of simple command line calculator in Java by creating nested expression evaluator and implementing continous integration 
 
-Problem Statement [Link](https://github.com/Haricharanpanjwani/calculator-challenge/assignment.docx).
+Problem Statement [Link](https://github.com/Haricharanpanjwani/calculator-challenge/blob/master/assignment.docx).
 
 ## Clone the Directory
 
