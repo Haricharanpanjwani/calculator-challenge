@@ -10,14 +10,14 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-		String expression = null;
-
+		String expression = "add(5,5)";
 	
+		/*
 		if(args.length > 0) 
 			expression = args[0]; 
 		else
 			System.out.println("Please enter the argrument");
-		
+		*/
 
 		ExpressionEvaluator calculator = new ExpressionEvaluator();
 
