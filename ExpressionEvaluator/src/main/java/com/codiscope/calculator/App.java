@@ -8,14 +8,14 @@ public class App {
 	private static final Logger LOGGER = LoggerFactory.getLogger(App.class.getName());
 		
 		public static void main(String[] args) {
-			String expression = null;
+			String expression = "add(2,mult(5,3))";
 
-			
+			/*
 			if(args.length > 0)
 				expression = args[0];
 			else
 				System.out.println("Please enter the argrument");
-			
+			*/
 			ExpressionEvaluator calc = new ExpressionEvaluator();
 			
 			try{
