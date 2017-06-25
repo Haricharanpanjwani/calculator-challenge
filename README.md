@@ -7,7 +7,7 @@ Problem Statement [Link](https://github.com/Haricharanpanjwani/calculator-challe
 
 ## Clone the Directory
 
-Git Clone [Link to directory](https://github.com/Haricharanpanjwani/calculator-challenge.git)
+git clone [Link to directory](https://github.com/Haricharanpanjwani/calculator-challenge.git)
 
 
 ## Clean and Build the code

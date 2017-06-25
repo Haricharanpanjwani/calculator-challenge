@@ -10,26 +10,27 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-		String expression = "add(5,5)";
+		String expression = null;
 	
-		/*
+		
 		if(args.length > 0) 
 			expression = args[0]; 
 		else
-			System.out.println("Please enter the argrument");
-		*/
-
-		ExpressionEvaluator calculator = new ExpressionEvaluator();
+			System.out.println("Please enter the argrument");	
+		
+		Calculator calculator = new Calculator();
 
 		try {
 			LOGGER.info("Performing the operation : " + expression);
-			double result = calculator.evaluateExpression(expression);
+			
+			float result = calculator.evaluateExpression(expression);
 			if(result != Integer.MAX_VALUE) {
 				LOGGER.info("Result of the operation : " + result);
 				System.out.println(result);
 			}
 		} catch (Exception e) {
 			LOGGER.error(String.format("Exception found: %1$s", e.getMessage()), e);
+			e.printStackTrace();
 		}
 	}
 }

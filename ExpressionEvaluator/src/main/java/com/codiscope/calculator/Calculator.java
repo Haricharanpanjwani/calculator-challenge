@@ -2,21 +2,20 @@ package com.codiscope.calculator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExpressionEvaluator {
+public class Calculator {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExpressionEvaluator.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(Calculator.class.getName());
 
 	private Pattern pattern = Pattern.compile("\\d+");
-	private Map<Object, Double> operations = new HashMap<Object, Double>();
+	private Map<Object, Float> operations = new HashMap<>();
 
-	private double evaluate(Object expList) {
+	private float evaluate(Object expList) {
 
 		if (expList instanceof String) {
 			
@@ -39,8 +38,11 @@ public class ExpressionEvaluator {
 			else if (operator.equalsIgnoreCase("add")) {
 
 				LOGGER.info("Performing addition");
-				LOGGER.debug("Performing addition in debug mode");
-				return evaluate(exp) + evaluate(expressionList.get(2));
+				return evaluate(exp) + evaluate(expressionList.get(2));				
+			} else if (operator.equalsIgnoreCase("sub")) {
+
+				LOGGER.info("Performing subtraction");
+				return evaluate(exp) - evaluate(expressionList.get(2));
 			} else if (operator.equalsIgnoreCase("mult")) {
 
 				LOGGER.info("Performing multiplication");
@@ -103,7 +105,7 @@ public class ExpressionEvaluator {
 		return new Object[] { expList, index };
 	}
 
-	public double evaluateExpression(String expression) {
+	public float evaluateExpression(String expression) {
 		LOGGER.info("Operation is started");
 		return evaluate(parseExp(expression.replaceAll(" ", ""), "start", 0)[0]);
 	}
