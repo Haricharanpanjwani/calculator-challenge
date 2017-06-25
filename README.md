@@ -5,6 +5,8 @@
 
 Problem Statement [Link](https://github.com/Haricharanpanjwani/calculator-challenge/blob/master/assignment.docx).
 
+Documentation [Link](https://github.com/Haricharanpanjwani/calculator-challenge/blob/master/Documentation.docx).
+
 ## Clone the Directory
 
 git clone [Link to directory](https://github.com/Haricharanpanjwani/calculator-challenge.git)
