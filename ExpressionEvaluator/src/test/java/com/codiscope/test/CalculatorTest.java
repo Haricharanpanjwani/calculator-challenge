@@ -47,15 +47,21 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testSubtract() {
+		LOGGER.debug("Testing addition of 5 and 3");
+		assertEquals(2.0, calculatorTest.evaluateExpression("sub(5,3)"), 0.0);
+	}
+	
+	@Test
 	public void testMultiplication() {
 		LOGGER.debug("Testing multiplication of 3 and 4");
 		assertEquals(12.0, calculatorTest.evaluateExpression("mult(3,4)"), 0.0);
 	}
 	
-	@Test
+	@Test(expected = ArithmeticException.class)
 	public void testDivision() {
-		LOGGER.debug("Testing division of 3 and 4");
-		assertEquals(20.0 / 0.0, calculatorTest.evaluateExpression("div(20,0)"), 0.0);
+		LOGGER.debug("Testing divide by zero");
+		assertEquals("error", calculatorTest.evaluateExpression("div(20,0)"));
 	}
 	
 	@Test
